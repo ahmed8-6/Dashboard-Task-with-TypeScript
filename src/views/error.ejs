@@ -1,0 +1,83 @@
+<%- include('parts/header.ejs') %>
+<div class="error-container">
+  <div class="error-card">
+    <div class="error-icon">⚠️</div>
+    <h1><%= title %></h1>
+    <p class="error-message"><%= errorMessage %></p>
+    <div class="error-actions">
+      <a href="/" class="btn btn-dashboard">← Back to Dashboard</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 20px;
+  }
+
+  .error-card {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #dc3545;
+  }
+
+  .error-icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+  }
+
+  .error-card h1 {
+    font-size: 2rem;
+    color: #dc3545;
+    margin-bottom: 15px;
+  }
+
+  .error-message {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+
+  .error-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .btn:hover {
+    opacity: 0.85;
+  }
+
+  .btn-dashboard {
+    background-color: #343a40;
+    color: #fff;
+  }
+
+  .btn-members {
+    background-color: #007bff;
+    color: #fff;
+  }
+</style>
+
+<%- include('parts/footer.ejs') %>

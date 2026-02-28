@@ -1,0 +1,104 @@
+<%- include('parts/header.ejs') %>
+
+<div class="form-container">
+  <h1>Add Member</h1>
+  <form action="/members/add" method="POST">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter member name"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="stack">Stack</label>
+      <select id="stack" name="stack" required>
+        <option value="" disabled selected>Select Stack</option>
+        <option value="NodeJS">NodeJS</option>
+        <option value="PHP">PHP</option>
+        <option value="Java">Java</option>
+        <option value="Dotnet">Dotnet</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="level">Level</label>
+      <select id="level" name="level" required>
+        <option value="" disabled selected>Select level</option>
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-submit">Add</button>
+  </form>
+</div>
+
+<style>
+  .form-container {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 30px 25px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .form-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #555;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: #28a745;
+  }
+
+  .btn-submit {
+    margin-top: 10px;
+    padding: 14px 40px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #28a745;
+    transition: opacity 0.3s ease;
+  }
+
+  .btn-submit:hover {
+    opacity: 0.85;
+  }
+</style>
+
+<%-include('parts/footer.ejs') %>
