@@ -1,16 +1,6 @@
 import type { NextFunction, Request, Response } from "express";
 import { Member } from "../models/member.model.js";
 
-type MemberParams = {
-  memberId: string;
-};
-
-type MemberBody = {
-  name: string;
-  stack: string;
-  level: string;
-};
-
 const addMemberForm = (
   req: Request,
   res: Response,
